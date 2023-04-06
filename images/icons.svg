@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>    
+    
+    <symbol id="i-close-button" viewBox="0 0 32 32">
+      <path d="M32 3.224l-3.224-3.224-12.776 12.776-12.776-12.776-3.224 3.224 12.776 12.776-12.776 12.776 3.224 3.224 12.776-12.776 12.776 12.776 3.224-3.224-12.776-12.776 12.776-12.776z"></path>
+    </symbol>
+
+    <symbol id="i-flag" viewBox="0 0 40 32">
+      <path fill="#ffd700" style="fill: var(--color1, #ffd700)" d="M40.209 0.495h-39.902v29.694h39.902v-29.694z"></path>
+      <path fill="#0057b7" style="fill: var(--color2, #0057b7)" d="M0.307 0.495h39.902v14.848h-39.902v-14.848z"></path>
+    </symbol>
+    
+  </defs>
+</svg>
