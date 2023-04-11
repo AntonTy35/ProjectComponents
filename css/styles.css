@@ -82,10 +82,8 @@
 
 /* --------------- Uniq-comp ---------------- */
 .uniq-section {
-    padding-top: 36px;
-    padding-bottom: 36px;
-
-    background: #E2E2E2;
+    padding-bottom: 72px;
+    background: #fff;
 }
 
 .uniq-title {
@@ -95,7 +93,7 @@
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: #111111;
@@ -118,9 +116,24 @@
 
 .uniq-card-list {
     padding: 0;
-    margin: 32px 0 0;
+    margin: 32px auto 0;
 
-    max-height: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.uniq-card-item {
+    width: 100%;
+    max-width: 336px;
+    border-radius: 15px;
+
+    position: relative;
+    overflow: hidden;
+
 }
 
 .uniq-card-link {
@@ -128,12 +141,7 @@
 }
 
 .uniq-card {
-    background: #FD9222;
-    border-radius: 15px;
-
-    padding: 8px;
-
-    max-width: 336px;
+    padding: 28px 8px;
 
     display: flex;
     flex-direction: column;
@@ -146,21 +154,58 @@
 
 .uniq-subtitle {
     margin-top: 25px;
+    margin-bottom: 0;
     display: flex;
     justify-content: start;
-
 
     font-weight: 600;
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+}
 
+.uniq-card-item:nth-child(1) {
+    background: #FD9222;
+}
+
+.uniq-card-item:nth-child(2n+2) {
+    background-color: #FFFFFF;
+}
+
+.uniq-card-item:nth-child(3n+3) {
+    background-color: #1E1823;
+}
+
+.uniq-card-item:nth-child(2n+1) .uniq-subtitle {
     color: #FFFFFF;
 }
 
+.uniq-card-item:nth-child(2n+2) .ucc-text {
+    letter-spacing: 0.04em;
+}
+
 .uniq-card-content {
-    padding: 8px;
+    padding: 28px 8px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(101%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: unset;
+}
+
+
+.uniq-card-link:is(:hover, :focus) .uniq-card-content {
+    transform: translateY(0);
+    background: #FFFFFF;
+    border-radius: 15px;
 }
 
 .ucc-title {
@@ -250,21 +295,75 @@
 
 @media screen and (min-width: 768px) {
     .uniq-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
+    }
+
+    .uniq-title {
+        max-width: 411px;
+        font-size: 24px;
+        line-height: 1.17;
+    }
+
+    .uniq-text {
+        max-width: 486px;
+        letter-spacing: 0.04em;
+    }
+
+    .uniq-card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .uniq-card-item {
+        width: calc((100% - 32px) / 2);
+    }
+
+    .uniq-card-item:nth-child(1) {
+        order: 1;
+    }
+
+    .uniq-card-item:nth-child(2) {
+        order: 3;
+    }
+
+    .uniq-card-item:nth-child(3) {
+        order: 4;
+    }
+
+    .uniq-card-item:nth-child(4) {
+        order: 2;
     }
 }
 
 @media screen and (min-width: 1200px) {
 
     .uniq-section {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-bottom: 128px;
     }
 
     .uniq-card {
-
         max-width: 270px;
+    }
+
+    .uniq-card-item:nth-child(2) {
+        order: 2;
+    }
+
+    .uniq-card-item:nth-child(3) {
+        order: 3;
+    }
+
+    .uniq-card-item:nth-child(4) {
+        order: 4;
+    }
+
+    .uniq-card-list {
+        gap: 19px;
+    }
+
+    .uniq-card-item {
+        width: calc((100% - 57px) / 4);
     }
 
 }

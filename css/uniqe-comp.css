@@ -1,1 +1,189 @@
 /* --------------- Uniq-comp ---------------- */
+
+.uniq-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    background: #E2E2E2;
+}
+
+.uniq-title {
+    margin: 0 auto;
+    max-width: 283px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.uniq-title>span {
+    color: rgba(253, 146, 34, 1);
+}
+
+.uniq-text {
+    margin: 24px auto 0;
+
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #111111;
+}
+
+.uniq-card-list {
+    padding: 0;
+    margin: 32px 0 0;
+
+    max-height: 270px;
+}
+
+.uniq-card-link {
+    text-decoration: none;
+}
+
+.uniq-card {
+    background: #FD9222;
+    border-radius: 15px;
+
+    padding: 8px;
+
+    max-width: 336px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.uniq-img {
+    display: flex;
+    justify-content: center;
+}
+
+.uniq-subtitle {
+    margin-top: 25px;
+    display: flex;
+    justify-content: start;
+
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.uniq-card-content {
+    padding: 8px;
+}
+
+.ucc-title {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: calc(22/18);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.ucc-btn-wrap {
+    display: flex;
+    column-gap: 6px;
+
+    margin-top: 8px;
+}
+
+.ucc-btn-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+
+    background: #FD9222;
+    border-radius: 35px;
+    border-color: transparent;
+
+    font-size: 10px;
+    line-height: 1.2;
+
+    color: #FFFFFF;
+}
+
+.ucc-btn-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+
+    background: #FAFAFA;
+    border: 1px solid #FD9222;
+    border-radius: 35px;
+
+    font-size: 10px;
+    line-height: 1.2;
+
+    color: #111111;
+}
+
+.ucc-text {
+    display: inline-block;
+
+    margin: 14px 0 0;
+    max-width: 279px;
+    min-height: 146px;
+    height: 146px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.02em;
+
+    color: #111111;
+
+    overflow: hidden;
+}
+
+
+@media screen and (min-width: 375px) {
+
+    .uniq-text {
+        max-width: 300px;
+    }
+
+    .uniq-card {
+        padding: 28px;
+    }
+
+    .uniq-card-content {
+        padding: 28px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .uniq-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .uniq-section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .uniq-card {
+
+        max-width: 270px;
+    }
+
+}
