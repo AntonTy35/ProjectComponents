@@ -80,6 +80,193 @@
 /* @import url('./modal-review.css'); */
 
 
+
+/* ------------------- Review section ---------------------- */
+
+.review-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-color: #FAFAFA;
+}
+
+.review-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #FD9222;
+}
+
+.review-title span {
+    color: #111111;
+}
+
+.review-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+}
+
+.review-item {
+    display: block;
+    width: 100%;
+}
+
+.review-item:nth-child(2) {
+    display: none;
+}
+
+.review-item:nth-child(3) {
+    display: none;
+}
+
+.review-content {
+    margin-top: 74px;
+    padding-top: 56px;
+    padding-bottom: 42px;
+    width: 100%;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    box-shadow: 0px 9.04932px 26.5717px rgba(215, 228, 249, 0.25);
+    border-radius: 15px;
+}
+
+.review-foto {
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.review-subtitle {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
+    color: #111111;
+}
+
+.review-text {
+    margin: 24px auto 0;
+    max-width: 299px;
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: rgba(17, 17, 17, 0.7);
+}
+
+.review-dots {
+    padding: 0;
+    margin: 20px auto 0;
+    display: flex;
+    column-gap: 13px;
+    justify-content: center;
+}
+
+.review-dots-item:nth-child(1) {
+    width: 28px;
+    height: 13px;
+    background: #FD9222;
+    border-radius: 6.5px;
+}
+
+.review-dots-item {
+    width: 13px;
+    height: 13px;
+    background: rgba(17, 17, 17, 0.1);
+    border-radius: 50%;
+}
+
+.review-btn {
+    display: block;
+    margin: 32px auto 0;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    color: #111111;
+    border: 1px solid #FD9222;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-btn:is(:focus, :hover) {
+    color: #FFFFFF;
+    background-color: #FD9222;
+}
+
+@media screen and (min-width: 768px) {
+
+    .review-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .review-list {
+        display: flex;
+        column-gap: 16px;
+    }
+
+    .review-item:nth-child(2) {
+        display: block;
+    }
+
+    .review-content {
+        margin-top: 91px;
+        min-height: 200px;
+    }
+
+    .review-item {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .review-text {
+        max-width: 312px;
+    }
+
+    .review-dots {
+        margin-top: 32px;
+    }
+
+    .review-btn {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .review-section {
+        padding-top: 128px;
+        padding-bottom: 128px;
+    }
+
+    .review-item:nth-child(3) {
+        display: block;
+    }
+
+    .review-list {
+        column-gap: 28px;
+    }
+
+    .review-item {
+        width: calc((100% - 56px) / 3);
+    }
+}
+
+
+
+
 /* --------------- Uniq-comp ---------------- */
 .uniq-section {
     padding-bottom: 72px;
@@ -397,4 +584,236 @@
         letter-spacing: 0.04em;
     }
 
+}
+
+
+
+
+/* --------------- Modal-review ---------------- */
+
+.backdrop-review {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-review {
+    width: 311px;
+    min-height: 471px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FAFAFA;
+    border-radius: 15px;
+    padding: 32px 24px;
+}
+
+.btn-modal-review-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+    fill: rgba(17, 17, 17, 1);
+    cursor: pointer;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal-review-close:is(:hover, :focus) {
+    background-color: #FCF1E0;
+    fill: #FD9222;
+}
+
+.modal-review-title {
+    margin: 0;
+    max-width: 255px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+}
+
+.modal-review-title span {
+    color: rgba(253, 146, 34, 1);
+}
+
+.modal-review-form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 14px;
+}
+
+.modal-review-label {
+    position: relative;
+}
+
+.modal-review-input {
+    width: 100%;
+    height: 45px;
+    padding: 14px 18px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+    border-radius: 8px;
+    background: #FAFAFA;
+}
+
+.modal-review-input::placeholder {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-review-icon-position {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 74px;
+    padding: 4px 8px 4px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    border-right: 2px solid rgba(64, 64, 64, 0.3);
+}
+
+.modal-review-tel {
+    padding: 0;
+    padding: 10px 18px 10px 106px;
+}
+
+.modal-review-textarea {
+    height: 91px;
+    resize: none;
+}
+
+.modal-review-send-btn {
+    display: block;
+    margin-top: 4px;
+    width: 93px;
+    height: 41px;
+    background: #FD9222;
+    border-radius: 100px;
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    color: #FFFFFF;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-review-send-btn:is(:hover, :focus) {
+    cursor: pointer;
+    color: rgba(253, 146, 34, 1);
+    background-color: rgba(252, 241, 224, 1);
+}
+
+@media screen and (min-width: 768px) {
+
+    .modal-review {
+        width: 517px;
+        min-height: 631px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+    }
+
+    .btn-modal-review-close {
+        top: 24px;
+        right: 24px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .btn-modal-review-close-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .modal-review-title {
+        max-width: 298px;
+        font-size: 24px;
+        line-height: 1.17;
+    }
+
+    .modal-review-form {
+        margin-top: 40px;
+        row-gap: 19px;
+    }
+
+    .modal-review-input {
+        height: 66px;
+        padding: 22px 24px;
+    }
+
+    .modal-review-input::placeholder {
+        font-size: 18px;
+        line-height: 1.22;
+    }
+
+    .modal-review-icon-position {
+        width: 125px;
+        padding: 5px 32px 5px 0;
+        font-size: 18px;
+        line-height: 1.22;
+        position: absolute;
+        top: 50%;
+        left: 24px;
+    }
+
+    .modal-review-tel {
+        padding: 0;
+        padding: 17px 24px 17px 176px;
+    }
+
+    .modal-review-tel-icon {
+        width: 32px;
+        height: 24px;
+    }
+
+    /* .modal-review-tel-icon:not(svg) {
+        transform-origin: 16px 16px;
+    } */
+
+    .modal-review-textarea {
+        height: 137px;
+    }
+
+    .modal-review-send-btn {
+        margin-top: -1px;
+        width: 117px;
+        height: 45px;
+    }
 }
